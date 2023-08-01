@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="jquery-3.6.1.min.js"></script>
+    <meta name="viewport" content="width=device-widthinitial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel, #flip{
+            padding:5px;
+            text-align:center;
+            background-color: lightgreen;
+            border:solid 1.5px darkred
+        }
+        #panel {
+            padding: 100px;
+            display:none;
+
+        }
+        h1{
+            text-align: center;
+            color: red;
+            text-transform: uppercase;
+            font-size: 3em;
+        }
+       p {
+        font-size: 1.5em;
+       }
+        </style>
+</head>
+<body>
+    <h1>jQuery slideDown and SlideUp</h1>
+    <div id="flip">click to slide down</div>
+    <div id="panel"><p>Hi Michael. I'm Greg, an installation specialist and 8 year Windows MVP, here to help you.Check for a newer Display driver on the PC or Display adapter Support Downloads webpage. While there check if there are other newer drivers to Update, including BIOS, Chipset, Sound, Network, USB3, Bluetooth and all others. Compare to the one present installed in Device Manager reached by right clicking the Start Menu.. You can take your time until they are all updated.There is a known issue of incorrect Display driver being pushed by Windows Update which requires rolling back the driver. Right click Start to open Device Manager, choose Display device, then Driver tab, then Roll back.If there is no Roll Back or that doesn't help choose Update Driver on Display device Driver tab, then Browse Computer, then Let Me Pick to see a list of all previously installed Display drivers, work backwards trying each to find one that works.
+        </p>
+
+    </div>
+       <script>
+        $(document).ready(function(){
+            $('#flip').click(function(){
+                $('#panel').slideDown('slow');
+            });
+
+            $('#flip').dblclick(function(){
+                $('#panel').slideUp('slow');
+
+
+            });
+        })
+       </script> 
+        
+</body>
+</html>
