@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>  
+    <script>
+        $(document).ready(function(e){
+            $('.btn').on('mousecenter',function(e){
+                x = e.pageX - $(this).offset().left;
+                y = e.pageY - $(this).offset().top;
+                $(this).find('span').css({top:y, left:x})
+            })
+        } )
+    </script>  
+    <title>Tooltip with button Hovering</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans);
+       *{
+            margin: 0;
+            font-family: 'Tangerine', sans-serif, bold;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background: lightgreen;
+        }
+            .btn
+        {
+            position: relative;
+            padding: 10px 30px;
+            border: 2px lightblue;
+            margin: 10px;
+            display: inline-black;
+            text-decoration: none;
+            color:darkgreen;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.5s;                               
+        }
+
+        .btn:hover
+        {
+            color:red;
+        }
+        .btn span{
+            position: absolute;
+            display: none;
+            width: 0;
+            height: 0;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            background: darkorchid;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hovering Effect on buttons</h1>
+    </div><br>
+    <
+
+<h2>
+<div>
+    <a href="#" class="btn"><span></span>Button-A</a>
+</div><br>
+<div>
+    <a href="#" class="btn"><span></span>Button-B</a>
+</div>
+</h2>
+    
+    
+</body>
+</html>
