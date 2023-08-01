@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.1.min.js" type="text/javascript"></script>
+    <title>jquery selectors</title>
+    <style>
+        body{
+          background-color: lightpink;
+        }
+      </style>
+    
+</head>
+<body>
+
+
+  <h1>Anchor Tags</h1>
+<div>
+  <a href="https://www.edureka.co/">Go to edureka website</a>
+</div> 
+<div>
+  <a href="https://www.lipsum.com/">Go to linkedIn</a>
+  </div>
+  <h1>Html Form</h1>
+
+      <form>
+        <div>
+        First Name: <input type="text">
+        </div><br>
+        <div>
+          Last Name: <input type="text">
+        </div><br>
+        <div>
+          Address: <input type="text">
+        </div><br>
+        <div>
+          Email Id: <input type="text">
+        </div><br>
+        <div>
+          Contact Number: <input type="text">
+        </div><br>
+        <div>
+          <input type="submit" value="submit now">
+        </div><br>
+        
+      </form>
+    </div>
+    <h1>Jquery Selectors</h1>
+    <div>
+        <h2 id="Text">Sample Text</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, dolorem reiciendis ad sequi deserunt, accusantium voluptas nobis fugiat repellendus ut animi laborum hic exercitationem aliquam voluptate quidem molestiae! Libero, minus.</p>
+    </div>
+    <div>
+        <h3>Sports Cars</h3>
+    <ul id="list">
+        <li>Aston Martin</li><br>
+        <li>Ferrari</li><br>
+        <li>Porche</li><br>
+        <li>Lamborghini</li><br>
+        <li>Mclaren</li><br>
+    </ul> 
+</div>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#list li").css("border","2px solid green");
+     });
+    </script>
+
+    <script>
+     $(document).ready(function(){
+        $("#Text").css("border","2px solid brown");
+     });
+     
+</script>
+ 
+</body>
+</html>
