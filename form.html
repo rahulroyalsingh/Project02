@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>how to remove in jQuery</title>
+        <style>
+
+          body{
+            background-color: blueviolet;
+          }
+        </style>
+    </head>
+	<script src="jquery-3.6.1.min.js"></script>
+		
+	
+	<script>
+	$(document).ready(function() {
+    var max_fields      = 20; 
+    var wrapper         = $(".input_fields_wrap"); 
+    var add_button      = $(".add_field_button"); 
+   
+    var x = 1; 
+	
+	
+   $(add_button).click(function(e){ 
+        e.preventDefault();
+        if(x < max_fields){ 
+	
+		    
+            $(wrapper).append('<div>Last Name: <input type="text"></a></div>'); 
+            x++; 
+	  }
+    });
+   
+    $(wrapper).on("click",".remove_field", function(e){ 
+       
+		e.preventDefault(); 
+		$(this).parent('div').remove(); 
+		x--;
+    })
+});
+	
+	</script>
+	<body>
+    <h1>
+  
+    </h1>
+     <div class="input_fields_wrap">
+    <button class="add_field_button">Add Input Fields</button>
+    <form>
+        <div>
+        First Name: <input type="text">
+        </div><br>
+        <div>
+          Last Name: <input type="text">
+        </div><br>
+        
+        <div>
+          <input type="submit" value="remove">
+        </div><br>
+        
+      </form>
+      
+  
+    
+     
+</body>
+</html>
